@@ -1,0 +1,27 @@
+import User from '../models/Users.js';
+import jwt from 'jsonwebtoken';
+
+class TokenController {
+  async store(req, res) {
+    const { email = " ", password = " "  } = req.body;
+    if (!email || !password) {
+      return res.status(401).json({ error: 'Dados insuficientes' });
+    }
+    const user = await User.findOne({ where: { email } });
+
+    if (!user) {
+      return res.status(401).json({ error: 'Usuário não encontrado' });
+    }
+
+    if (!(await user.checkPassword(password))) {
+      return res.status(401).json({ error: 'Senha inválida' });
+    }
+    const { id } = user;
+    const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET, {
+      expiresIn: process.env.TOKEN_EXPIRATION_IN,
+    });
+    return res.json({ token });
+  }
+};
+
+export default new TokenController();
