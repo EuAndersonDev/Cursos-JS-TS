@@ -3,11 +3,14 @@ const router = new Router();
 import UserController from '../controllers/UserController.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 
+//Não deveria existir em um sistema real, apenas para testes
 router.post('/', UserController.store);
 router.get('/', authMiddleware, UserController.index);
-router.get('/:id', authMiddleware, UserController.show);
-router.put('/:id', authMiddleware, UserController.update);
-router.delete('/:id', authMiddleware, UserController.delete);
+
+
+router.get('/', authMiddleware, UserController.show);
+router.put('/', authMiddleware, UserController.update);
+router.delete('/', authMiddleware, UserController.delete);
 
 export default router;
 
