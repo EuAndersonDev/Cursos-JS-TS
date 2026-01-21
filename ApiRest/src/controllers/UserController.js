@@ -25,7 +25,7 @@ class UserController {
 
   async show(req, res) {
     try {
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.userId);
       const { id, nome, email } = user;
       return res.json({ id, nome, email });
     } catch (e) {
@@ -35,10 +35,10 @@ class UserController {
 
   async update(req, res) {
     try {
-      if (!req.User.id) {
+      if (!req.userId) {
         return res.status(400).json({ error: 'ID não informado' });
       }
-      const user = await User.findByPk(req.User.id);
+      const user = await User.findByPk(req.userId);
       if (!user) {
         return res.status(400).json({ error: 'Usuário não encontrado' });
       }
@@ -52,10 +52,10 @@ class UserController {
 
   async delete(req, res) {
     try {
-      if (!req.params.id) {
+      if (!req.userId) {
         return res.status(400).json({ error: 'ID não informado' });
       }
-      const user = await User.findByPk(req.User.id);
+      const user = await User.findByPk(req.userId);
       if (!user) {
         return res.status(400).json({ error: 'Usuário não encontrado' });
       }

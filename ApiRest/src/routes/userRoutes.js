@@ -5,7 +5,7 @@ import authMiddleware from '../middlewares/authMiddleware.js';
 
 //Não deveria existir em um sistema real, apenas para testes
 router.post('/', UserController.store);
-router.get('/', authMiddleware, UserController.index);
+// router.get('/', authMiddleware, UserController.index);
 
 
 router.get('/', authMiddleware, UserController.show);
