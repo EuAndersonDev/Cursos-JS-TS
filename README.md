@@ -1,57 +1,112 @@
-📚 Cursos JS & TS - Estudos Udemy
-Este repositório contém meus códigos, exercícios e projetos desenvolvidos ao longo de dois cursos abrangentes da Udemy focados no ecossistema JavaScript e TypeScript.
+# 📚 Cursos JS & TS — Estudos Udemy
 
-🚀 Cursos Inclusos
-1. JavaScript e TypeScript do básico ao avançado 2024
-Neste curso, cubro toda a base da linguagem até recursos avançados:
+Este repositório contém meus **códigos, exercícios e projetos** desenvolvidos ao longo de dois cursos abrangentes da **Udemy**, focados no ecossistema **JavaScript e TypeScript**, com ênfase em backend moderno.
 
-JavaScript Tooling: Webpack, Babel e módulos.
+---
 
-Lógica de Programação: Estruturas de repetição, condicionais e tratamento de erros.
+## 🚀 Cursos Inclusos
 
-Programação Orientada a Objetos (POO): Classes, prototypes e herança.
+### 1️⃣ JavaScript e TypeScript do básico ao avançado (2024)
 
-Assincronismo: Promises, Async/Await e Fetch API.
+Curso focado em construir uma base sólida e avançar até conceitos modernos do ecossistema JS/TS.
 
-TypeScript: Tipagem estática, interfaces, generics e integração com ecossistema JS.
+**Conteúdos estudados:**
 
-2. NestJS - Curso completo para REST API com TypeORM e JWT
-Foco no desenvolvimento back-end robusto e escalável utilizando o framework NestJS:
+* ⚙️ **JavaScript Tooling**
+  Webpack, Babel e sistema de módulos.
 
-Arquitetura NestJS: Modules, Controllers, Services e Providers.
+* 🧠 **Lógica de Programação**
+  Estruturas de repetição, condicionais e tratamento de erros.
 
-Banco de Dados: Integração com bancos relacionais utilizando o TypeORM.
+* 🧩 **Programação Orientada a Objetos (POO)**
+  Classes, prototypes e herança.
 
-Segurança: Implementação de autenticação e autorização via JWT (JSON Web Token).
+* ⏳ **Assincronismo**
+  Promises, Async/Await e Fetch API.
 
-Validação: Uso de DTOs e Class Validator.
+* 🟦 **TypeScript**
+  Tipagem estática, interfaces, generics e integração com JavaScript.
 
-Padrões: Aplicação de conceitos de SOLID e Clean Code no back-end.
+---
 
-📁 Estrutura do Repositório
-A organização das pastas segue a evolução do aprendizado:
+### 2️⃣ NestJS — Curso completo para REST API com TypeORM e JWT
 
-Bash
+Curso voltado para o desenvolvimento **backend robusto, escalável e profissional** utilizando NestJS.
 
-├── curso-js-ts/          # Exercícios do curso de JavaScript/TypeScript
-└── curso-nestjs/         # API desenvolvida durante o curso de NestJS
+**Conteúdos estudados:**
 
-🛠️ Tecnologias Utilizadas
-Linguagens: JavaScript (ES6+), TypeScript
+* 🏗 **Arquitetura NestJS**
+  Modules, Controllers, Services e Providers.
 
-Frameworks/Libs: NestJS, Express
+* 🗄 **Banco de Dados**
+  Integração com bancos relacionais utilizando **TypeORM**.
 
-ORM: TypeORM
+* 🔐 **Segurança**
+  Autenticação e autorização com **JWT (JSON Web Token)**.
 
-Banco de Dados: PostgreSQL / MySQL (ou o utilizado no curso)
+* ✅ **Validação de Dados**
+  Uso de DTOs e `class-validator`.
 
-Ferramentas: Node.js, Git, VS Code
+* 📐 **Boas Práticas**
+  Aplicação de princípios **SOLID** e **Clean Code** no backend.
 
-📝 Notas de Estudo
-Use este espaço para anotar comandos úteis ou conceitos importantes que você aprendeu.
+---
 
-Para rodar o projeto NestJS: npm run start:dev
+## 📁 Estrutura do Repositório
 
-Para compilar TS: tsc
+A organização das pastas segue a evolução natural do aprendizado ao longo dos cursos:
 
-Desenvolvido por Anderson
+```bash
+📦 Cursos-JS-TS
+├── 📁 curso-js-ts/     # Exercícios e exemplos do curso de JavaScript e TypeScript
+└── 📁 curso-nestjs/    # API REST desenvolvida durante o curso de NestJS
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+**Linguagens**
+
+* JavaScript (ES6+)
+* TypeScript
+
+**Frameworks & Bibliotecas**
+
+* NestJS
+* Express
+
+**ORM**
+
+* TypeORM
+
+**Banco de Dados**
+
+* PostgreSQL / MySQL (ou conforme utilizado no curso)
+
+**Ferramentas**
+
+* Node.js
+* Git & GitHub
+* VS Code
+
+---
+
+## 📝 Notas de Estudo
+
+Alguns comandos e lembretes úteis durante os estudos:
+
+```bash
+# Rodar o projeto NestJS em modo desenvolvimento
+npm run start:dev
+
+# Compilar arquivos TypeScript
+tsc
+```
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Anderson Reis**
+🚀 Estudante e desenvolvedor focado em JavaScript, TypeScript e Backend
