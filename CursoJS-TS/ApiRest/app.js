@@ -7,6 +7,7 @@ import userRoutes from './src/routes/userRoutes.js';
 import tokenRoutes from './src/routes/TokenRoutes.js';
 import alunoRoutes from './src/routes/alunoRoutes.js';
 import fotoRoutes from './src/routes/fotoRoutes.js';
+import { resolve } from 'path';
 import './src/database/index.js';
 
 
@@ -20,6 +21,8 @@ class App{
   middlewares(){
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
+    const uploadsPath = resolve(process.cwd(), 'uploads', 'images');
+    this.app.use('/images/', express.static(uploadsPath));
   }
 
   routes(){

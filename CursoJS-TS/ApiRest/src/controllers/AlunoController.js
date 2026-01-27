@@ -6,24 +6,26 @@ class AlunoController {
       const alunos = await Aluno.findAll({
         attributes: ['id', 'nome', 'email', 'idade', 'peso', 'altura'],
         order: [['id', 'DESC']],
-        include: { model: Foto, attributes: ['url', 'filename'] }
+        include: { model: Foto, attributes: ['filename', 'url']}
       });
-      return res.json({alunos});
+      return res.json(alunos);
     } catch (e) {
-      return res.json(null);
+      return res.json({errors: e.message} );
     }
   }
 
   async show(req, res) {
     try {
       const { id } = req.params;
-      const aluno = await Aluno.findByPk(id, { attributes: ['id', 'nome', 'email'] });
+      const aluno = await Aluno.findByPk(id, { attributes: ['id', 'nome', 'email', 'idade', 'peso', 'altura'],
+        include: { model: Foto, attributes: ['filename', 'url']}
+       });
       if (!aluno) {
         return res.status(404).json({ errors: ['Aluno não encontrado'] });
       }
       return res.json(aluno);
     } catch (e) {
-      return res.json(null);
+      return res.json({errors: e.message} );
     }
   }
 
