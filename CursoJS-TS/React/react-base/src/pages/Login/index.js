@@ -1,4 +1,3 @@
-import react from "react";
 import { Title } from "./styled";
 import { Container } from "../../styles/GlobalStyles";
 
