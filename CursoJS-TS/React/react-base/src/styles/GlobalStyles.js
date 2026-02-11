@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import {primaryColor, primaryDarkColor} from "../config/colors";
+import "react-toastify/dist/ReactToastify.css";
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -34,6 +35,11 @@ export const GlobalStyles = createGlobalStyle`
 
     ul{
         list-style: none;
+    }
+
+    body .Toastify .Toastify__toast-container .Toastify__toast--default {
+        background: ${primaryColor};
+        color: #fff;
     }
 `;
 
