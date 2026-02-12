@@ -9,7 +9,7 @@ export default function Login() {
 
     function handleClick(e) {
         e.preventDefault();
-        dispatch(exempleActions.clicarBotao());
+        dispatch(exempleActions.clicarBotaoRequest());
     }
 
     return (
