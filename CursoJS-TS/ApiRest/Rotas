@@ -1,0 +1,448 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: ApiRest
+meta:
+  id: wrk_df9a352fa04241a899f99bedd49b12fa
+  created: 1768002670605
+  modified: 1768002670605
+  description: ""
+collection:
+  - name: Home
+    meta:
+      id: fld_1aa79c6926754766a12dcb317fe1e944
+      created: 1768002808247
+      modified: 1768002808247
+      sortKey: -1768002808247
+      description: ""
+    children:
+      - url: "{{url}}"
+        name: Index
+        meta:
+          id: req_1d62ba34b853404fbeb701a50de749a6
+          created: 1768002769951
+          modified: 1768002822491
+          isPrivate: false
+          description: ""
+          sortKey: -1768002815825
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_90a663ef233f4cce92e4f212b4277db9
+      created: 1768507089547
+      modified: 1768507089547
+      sortKey: -1768507089547
+      description: ""
+    children:
+      - url: "{{url}}/users/"
+        name: Store
+        meta:
+          id: req_1be56fcfdf754cdf8f93a5c99f912649
+          created: 1768507092009
+          modified: 1768507812554
+          isPrivate: false
+          description: ""
+          sortKey: -1768507092009
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"pripri",
+            	"email":"pripri@gmail.com",
+            	"password":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/users/"
+        name: Index
+        meta:
+          id: req_60fce2cd2f61496f88436491018704a9
+          created: 1768508027343
+          modified: 1769025469351
+          isPrivate: false
+          description: ""
+          sortKey: -1768508027343
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJwcmlwcmlAZ21haWwuY29tIiwiaWF0IjoxNzY5MDI1MDc4LCJleHAiOjE3NjkxMTE0Nzh9.rrrS4ozCxWyJbBNz59X7efZjMgQHU07AdTwa6Ziayvc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/users/"
+        name: Show
+        meta:
+          id: req_767a574a736244619c4315b7e7dde77f
+          created: 1768508097727
+          modified: 1769025661435
+          isPrivate: false
+          description: ""
+          sortKey: -1768508097727
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJwcmlwcmlAZ21haWwuY29tIiwiaWF0IjoxNzY5MDI1MDc4LCJleHAiOjE3NjkxMTE0Nzh9.rrrS4ozCxWyJbBNz59X7efZjMgQHU07AdTwa6Ziayvc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/users/"
+        name: Update
+        meta:
+          id: req_c7c9b128e44041c98e57da90b1ac5bb7
+          created: 1768508239848
+          modified: 1769025724042
+          isPrivate: false
+          description: ""
+          sortKey: -1768508239848
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"pripri2121",
+            	"email":"pripri2121@gmail.com",
+            	"password":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJwcmlwcmlAZ21haWwuY29tIiwiaWF0IjoxNzY5MDI1MDc4LCJleHAiOjE3NjkxMTE0Nzh9.rrrS4ozCxWyJbBNz59X7efZjMgQHU07AdTwa6Ziayvc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/users/"
+        name: Delete
+        meta:
+          id: req_2720a76e007249f3918632b55f8cea97
+          created: 1768508321803
+          modified: 1769025774443
+          isPrivate: false
+          description: ""
+          sortKey: -1768508321803
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJwcmlwcmkyMTIxQGdtYWlsLmNvbSIsImlhdCI6MTc2OTAyNTc2NCwiZXhwIjoxNzY5MTEyMTY0fQ.JHfrHHzJLDwokoL-JY5X6nbkHa6sPFz7qARyk0t-h5Y
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tokens
+    meta:
+      id: fld_973a8eeb16d94f74a7e0c2302f136a6a
+      created: 1768508798449
+      modified: 1768508805232
+      sortKey: -1768508798449
+      description: ""
+    children:
+      - url: "{{url}}/tokens/"
+        name: Store
+        meta:
+          id: req_e4d932ba6dae4048af140c5639b2b383
+          created: 1768508808153
+          modified: 1769210048600
+          isPrivate: false
+          description: ""
+          sortKey: -1768508808153
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "pripri@gmail.com",
+            	"password":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Alunos
+    meta:
+      id: fld_c1c606019cfd4b7aa0e98b35f999180c
+      created: 1769026497355
+      modified: 1769026497355
+      sortKey: -1769026497356
+      description: ""
+    children:
+      - url: "{{url}}/alunos/"
+        name: Index
+        meta:
+          id: req_c7e516eb68d94c75bd4e9404216f6c3f
+          created: 1769026499858
+          modified: 1769026517004
+          isPrivate: false
+          description: ""
+          sortKey: -1769026499858
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/alunos/"
+        name: Store
+        meta:
+          id: req_0dc99fb429e64c57bbce48289eca50c5
+          created: 1769206041215
+          modified: 1769206362043
+          isPrivate: false
+          description: ""
+          sortKey: -1769206041215
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "João",
+              "sobrenome": "Silva",
+              "email": "joao.silva@email.com",
+              "idade": 20,
+              "peso": 70.5,
+              "altura": 1.75
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/alunos/1"
+        name: Delete
+        meta:
+          id: req_8d9b6130526945278b5a28f9cf81925a
+          created: 1769206076020
+          modified: 1769206151044
+          isPrivate: false
+          description: ""
+          sortKey: -1769206076020
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/alunos/2"
+        name: Show
+        meta:
+          id: req_bcce4a682dd1441e9781a318b7f1966a
+          created: 1769206103703
+          modified: 1769206372177
+          isPrivate: false
+          description: ""
+          sortKey: -1769206103703
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/alunos/2"
+        name: Update
+        meta:
+          id: req_024b0a5e8c504518806de0c08b50a7e2
+          created: 1769206119501
+          modified: 1769206387509
+          isPrivate: false
+          description: ""
+          sortKey: -1769206119501
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "João",
+              "sobrenome": "Silva",
+              "email": "joao1212.silva@email.com",
+              "idade": 20,
+              "peso": 70.5,
+              "altura": 1.75
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Fotos
+    meta:
+      id: fld_e95817af22c446619450aa59eef0562a
+      created: 1769206789902
+      modified: 1769206789902
+      sortKey: -1769206789902
+      description: ""
+    children:
+      - url: "{{url}}/fotos/"
+        name: Store
+        meta:
+          id: req_4b2b69ef09b04e1189eb56f8d455c512
+          created: 1769206798021
+          modified: 1769471837836
+          isPrivate: false
+          description: ""
+          sortKey: -1769206798021
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: foto
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\Anderson Reis\Downloads\MinhaFotoProfissional.jpg
+              type: file
+            - name: aluno_id
+              value: "2"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJwcmlwcmlAZ21haWwuY29tIiwiaWF0IjoxNzY5NDcxODA1LCJleHAiOjE3Njk1NTgyMDV9.V-p1zRvwP9kG90_D2piYCjqD7JIrK5CMxHDbE2DLs-I
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_27b87e758537dce57409401a415873eab3428c23
+    created: 1768002670609
+    modified: 1768002670609
+environments:
+  name: Base Environment
+  meta:
+    id: env_27b87e758537dce57409401a415873eab3428c23
+    created: 1768002670607
+    modified: 1768002745155
+    isPrivate: false
+  data:
+    url: http://localhost:3000

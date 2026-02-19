@@ -3,10 +3,10 @@ import { Title } from "./styled";
 import { Container } from "../../styles/GlobalStyles";
 
 
-export default function Login() {
+export default function Register() {
     return (
         <Container>
-            <Title>Login</Title>
+            <Title>Register</Title>
         </Container>
     );
 }
