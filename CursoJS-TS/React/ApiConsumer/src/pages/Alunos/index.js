@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Container } from "../../styles/GlobalStyles";
 import axios from "../../services/axios";
-import { AlunoContainer } from "./styled";
+import { AlunoContainer, ProfilePicture } from "./styled";
+import { get } from "lodash";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { FaUserCircle, FaEdit, FaWindowClose } from "react-icons/fa";
 
 export default function Alunos() {
     const [alunos, setAlunos] = useState([]);
@@ -25,15 +28,29 @@ export default function Alunos() {
 
             <AlunoContainer>
                 {alunos.map((aluno) => (
-                    <div key={aluno.id}>
-                        {aluno.nome}
-                        
-                        {aluno.Fotos && aluno.Fotos[0] && (
-                            <img src={aluno.Fotos[0].url} alt={aluno.nome} />
-                        )}
+                    <div key={String(aluno.id)}>
+                        <ProfilePicture>
+                            {get(aluno, "Fotos[0].url", false) ? (
+                                <img src={aluno.Fotos[0].url} alt={aluno.nome} />
+                            ) : (
+                                <FaUserCircle size={40} />
+                            )}
+                        </ProfilePicture>
+
+                        <span>{aluno.nome}</span>
+                        <span>{aluno.email}</span>
+
+                        <Link to={`/aluno/${aluno.id}/edit`}>
+                            <FaEdit size={16} />
+                        </Link>
+
+                        <Link to={`/aluno/${aluno.id}/delete`}>
+                            <FaWindowClose size={16} />
+                        </Link>
                     </div>
                 ))}
             </AlunoContainer>
+
         </Container>
     );
 }
