@@ -27,6 +27,14 @@ export const GlobalStyles = createGlobalStyle`
         padding: 10px 20px;
         border-radius: 8px;
         font-weight: 700;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover{
+        background-color: ${primaryDarkColor};
+        color: #fff;
+        transition: background-color 0.3s ease;
+        filter: brightness(1.1);
     }
 
     a{
